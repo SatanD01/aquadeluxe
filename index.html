@@ -246,7 +246,7 @@
               </div>
             </div>
           </div>
-          <div class="drop-box drop-one" style="background-attachment: scroll; background-position: center top 5215.86px;"></div>
+          <div class="drop-box drop-one" style="background-attachment: fixed; background-position: center top 150px"></div>
           <div class="filter-box-back filter-one-back"></div>
           <div class="filter-box filter-one"></div>
         </div>
@@ -267,7 +267,7 @@
               </div>
             </div>
           </div>
-          <div class="drop-box drop-two" style="background-attachment: scroll; background-position: center top 4815.86px;"></div>
+          <div class="drop-box drop-two" style="background-attachment: fixed; background-position: center top 150px;"></div>
           <div class="filter-box-back filter-two-back"></div>
           <div class="filter-box filter-two"></div>
         </div>
@@ -289,7 +289,7 @@
               </div>
             </div>
           </div>
-          <div class="drop-box drop-three" style="background-attachment: scroll; background-position: center top 4415.86px;"></div>
+          <div class="drop-box drop-three" style="background-attachment: fixed; background-position: center top 150px;"></div>
           <div class="filter-box-back filter-three-back"></div>
           <div class="filter-box filter-three"></div>
         </div>
@@ -310,7 +310,7 @@
               </div>
             </div>
           </div>
-          <div class="drop-box drop-four" style="background-attachment: scroll; background-position: center top 4015.86px;"></div>
+          <div class="drop-box drop-four" style="background-attachment: fixed; background-position: center top 150px;"></div>
           <div class="filter-box-back filter-four-back"></div>
           <div class="filter-box filter-four"></div>
         </div>
@@ -329,7 +329,7 @@
               </div>
             </div>
           </div>
-          <div class="drop-box drop-five" style="background-attachment: scroll; background-position: center top 3615.86px;"></div>
+          <div class="drop-box drop-five" style="background-attachment: fixed; background-position: center top 150px;"></div>
           <div class="filter-box-back filter-five-back"></div>
           <div class="filter-box filter-five"></div>
         </div>
@@ -348,7 +348,7 @@
                       </div>
                   </div>
               </div>
-              <div class="drop-box drop-six" style="background-attachment: scroll; background-position: center top 3215.86px;"></div>
+              <div class="drop-box drop-six" style="background-attachment: fixed; background-position: center top 150px;"></div>
               <div class="filter-box-back filter-six-back"></div>
               <div class="filter-box filter-six"></div>
           </div>
@@ -363,7 +363,7 @@
               </div>
             </div>
           </div>
-          <div class="drop-box drop-seven" style="background-attachment: scroll; background-position: center top 3015.86px;"></div>
+          <div class="drop-box drop-seven" style="background-attachment: fixed; background-position: center top 150px;"></div>
         </div>
       </div>
     </div>
@@ -682,6 +682,36 @@ AQUA DELUXE GOLD – установите и наслаждайтесь!
 				})
 				return false;
 			})
+      var deltaY = 150;
+      var windowHeight = 0;
+      var counter = 0;
+      var dropBoxes = []
+      function scrollBg(event) {
+          //var win_h = $(window).height(); // not used
+          var scroll = window.scrollY;
+          //console.log(event);
+          dropBoxes.each(function () {
+              //var off = $(this).offset();
+              //barr = off.top;
+              var x = Math.round(scroll + deltaY);
+              if (x > 0) {
+                  //$(this).css("background-position", "center top " + x + "px");
+                  //console.log('invocation: ', counter++, x, off);
+              }
+
+          });
+      }
+      $(document).ready(function () {
+          //$(".drop-box").css("background-attachment", "local");
+
+          windowHeight = window.innerHeight;
+          dropBoxes = $(".drop-box");
+          scrollBg();
+          $(window).scroll(function (event) {
+              scrollBg(event);
+          });
+      });
+
     </script>
 
   
