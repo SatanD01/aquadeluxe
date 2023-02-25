@@ -19,7 +19,7 @@ $(function() {
 					var x = scroll + d_x - barr;
 					$(this).css('background-position','center top ' + x + 'px');
 				});
-			}, 1);
+			}, 13);
 		});
 	});
 
