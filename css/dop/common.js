@@ -3,7 +3,7 @@ $(function() {
   //scroll_bg
 
   $(document).ready(function(){
-    $('.drop-box').css('background-attachment', 'initial');
+    $('.drop-box').css('background-attachment', 'local');
     function croll_bg(){
       var win_h = $(window).height();
       var scroll = $(this).scrollTop();
