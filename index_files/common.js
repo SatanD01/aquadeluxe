@@ -5,7 +5,6 @@ $(function() {
 		$(document).ready(function(){
 			$('.drop-box').css('background-attachment', 'initial');
 			function croll_bg(){
-				var win_h = $(window).height();
 				var scroll = $(this).scrollTop();
 				var d_x = 250;
 				$('.drop-box').each(function(){
