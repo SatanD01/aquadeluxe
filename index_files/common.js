@@ -1,6 +1,27 @@
 $(function() {
 
   //scroll_bg
+	if (navigator.platform.indexOf("Mac") === 0 || navigator.platform === "iPhone") {
+		$(document).ready(function(){
+			$('.drop-box').css('background-attachment', 'initial');
+			function croll_bg(){
+				var win_h = $(window).height();
+				var scroll = $(this).scrollTop();
+				var d_x = 250;
+				$('.drop-box').each(function(){
+					var off = $(this).offset();
+					barr = off.top;
+					var x = scroll + d_x - barr;
+					$(this).css('background-position','center top ' + x + 'px');
+				});
+			}
+			croll_bg();
+			$(window).scroll(function(){
+				croll_bg();
+			});
+		});
+	}
+
 
 	//SVG Fallback
 	if(!Modernizr.svg) {

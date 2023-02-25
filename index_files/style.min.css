@@ -1019,16 +1019,27 @@ nav.navbar, .second-water-cnt.for .img img, .img-four-cont img, .knop {
 .drop-six {
     background: url(../img/6.png) no-repeat center top 150px fixed;
 }
-
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px) {
-    .drop-box {
-
-        background-attachment: initial;
-
+@supports (-webkit-touch-callout: none) {
+    .drop-one {
+        background-attachment: initial; background-position: center top 5215.86px;
+    }
+    .drop-two {
+        background-attachment: initial; background-position: center top 4815.86px;
+    }
+    .drop-three {
+        background-attachment: initial; background-position: center top 4415.86px;
+    }
+    .drop-four {
+        background-attachment: initial; background-position: center top 4015.86px;
+    }
+    .drop-five {
+        background-attachment: initial; background-position: center top 3615.86px;
+    }
+    .drop-six {
+        background-attachment: initial; background-position: center top 3215.86px;
     }
 }
+
 
 .drop-box {
     width: 100%;
