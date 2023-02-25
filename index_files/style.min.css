@@ -1022,7 +1022,7 @@ nav.navbar, .second-water-cnt.for .img img, .img-four-cont img, .knop {
 
 .drop-box {
     width: 100%;
-    position: absolute;
+    position: sticky;
     left: 0;
     top: 0;
     bottom: 0;
