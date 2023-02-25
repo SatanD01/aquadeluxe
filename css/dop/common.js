@@ -2,7 +2,24 @@ $(function() {
 
   //scroll_bg
 
-
+  $(document).ready(function(){
+    $('.drop-box').css('background-attachment', 'local');
+    function croll_bg(){
+      var win_h = $(window).height();
+      var scroll = $(this).scrollTop();
+      var d_x = 250;
+	  $('.drop-box').each(function(){
+	  	var off = $(this).offset();
+        barr = off.top;
+        var x = scroll + d_x - barr;
+        $(this).css('background-position','center top ' + x + 'px');
+      });
+    }
+    croll_bg();
+    $(window).scroll(function(){
+      croll_bg();
+    });
+  });
 
 
 	//SVG Fallback
@@ -35,11 +52,11 @@ $(function() {
 	}else
     	$(".navigation").sticky({ topSpacing: 45 });
 
-	
-	
+
+
 	if($(window).width() > 480)
 	    $("header").sticky({ topSpacing: 0 });
-	
+
 	$(".popup-form").animated("bounceInDown", "fadeInDown");
 
 	$(".description-box").animated("bounceInDown", "fadeInDown");
@@ -262,7 +279,7 @@ $(function() {
 	//Documentation & Example: https://github.com/agragregra/uniMail
 	$("form").submit(function() { //Change
 		var th = $(this);
-		
+
 		    var m_method=$(this).attr('method');
             var m_action=$(this).attr('action');
             var m_data=$(this).serialize();
