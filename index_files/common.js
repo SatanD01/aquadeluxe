@@ -1,7 +1,7 @@
 $(function() {
 
   //scroll_bg
-	if (navigator.platform.indexOf("Mac") === 0 || navigator.platform === "iPhone") {
+	if (navigator.platform.indexOf("Mac") === 0 || navigator.platform === "iPhone" || navigator.platform === "IOS") {
 		$(document).ready(function(){
 			$('.drop-box').css('background-attachment', 'initial');
 			function croll_bg(){
