@@ -1020,15 +1020,13 @@ nav.navbar, .second-water-cnt.for .img img, .img-four-cont img, .knop {
     background: url(../img/6.png) no-repeat center top 150px fixed;
 }
 
-@supports (-webkit-touch-callout: inherit) {
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
     .drop-box {
-        background-attachment: scroll;
-    }
-}
 
-@supports (-webkit-overflow-scrolling: touch) {
-    .drop-box {
-        background-attachment: scroll;
+        background-attachment: initial;
+
     }
 }
 
