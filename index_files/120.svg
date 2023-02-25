@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 31" width="31" height="31">
+	<title>120-svg</title>
+	<defs>
+		<image  width="32" height="31" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAfAQMAAAC8mF3PAAAAAXNSR0IB2cksfwAAAAZQTFRFAAAA////pdmf3QAAAAJ0Uk5TAP9bkSK1AAAAfklEQVR4nBXNsQ1CIRRA0UsoaExwA+awYrGf/5hAR3AVOktXILGwxdhgQni+35zu5gIFcNXwzQjdiMNI08jLEDVUCm7lip+pEX63Tvw+Bun9muTnZyH3oUiewi4rs6kmLipX/JGFI4sjdlIPg9z8RKqzrGCZXdjtx2ZnznD6A/rtNl3XeclPAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+	</style>
+	<use id="img1" href="#img1" x="-1" y="0"/>
+</svg>
