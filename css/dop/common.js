@@ -2,24 +2,7 @@ $(function() {
 
   //scroll_bg
 
-  $(document).ready(function(){
-    $('.drop-box').css('background-attachment', 'local');
-    function croll_bg(){
-      var win_h = $(window).height();
-      var scroll = $(this).scrollTop();
-      var d_x = 250;
-	  $('.drop-box').each(function(){
-	  	var off = $(this).offset();
-        barr = off.top;
-        var x = scroll + d_x - barr;
-        $(this).css('background-position','center top ' + x + 'px');
-      });
-    }
-    croll_bg();
-    $(window).scroll(function(){
-      croll_bg();
-    });
-  });
+
 
 
 	//SVG Fallback
